@@ -6,16 +6,13 @@ import Navbar from '../components/Navbar';
 function Login() {
 
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [showPassword, setShowPassword] = useState(false);
+    const [password, setPassword] = useState('')
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log({
-            email,
-            password
-        });
+        console.log(email, password)
     };
 
     return (
@@ -50,7 +47,6 @@ function Login() {
 
                             <div className="password-wrapper">
                                 <input
-                                    type={showPassword ? 'text' : 'password'}
                                     id="password"
                                     placeholder="Inserisci la password"
                                     value={password}
@@ -61,22 +57,9 @@ function Login() {
                                 <button
                                     type="button"
                                     className="toggle-password"
-                                    onClick={() => setShowPassword(!showPassword)}
                                 >
-                                    {showPassword ? 'Nascondi' : 'Mostra'}
                                 </button>
                             </div>
-                        </div>
-
-                        <div className="login-options">
-                            <label className="remember-me">
-                                <input type="checkbox" />
-                                Ricordami
-                            </label>
-
-                            <a href="#recupera-password">
-                                Password dimenticata?
-                            </a>
                         </div>
 
                         <Link to='/admin'>
