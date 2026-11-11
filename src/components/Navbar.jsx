@@ -15,6 +15,7 @@ function Navbar() {
                 <NavLink to="/guestbook">Guestbook</NavLink>
                 <NavLink to="/lista-nozze">Lista Nozze</NavLink>
                 <NavLink to="/login">Login</NavLink>
+                <NavLink to="/">Logout</NavLink>
             </div>
 
         </nav>
