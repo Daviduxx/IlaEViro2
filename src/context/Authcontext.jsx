@@ -70,9 +70,22 @@ export function AuthProvider({ children }) {
 
     const logout = async () => {
         await supabase.auth.signOut()
-
         setSession(null);
         setIsAdmin(false);
         setUser(null)
     }
+
+    const value = {
+        session,
+        user,
+        isAdmin,
+        loading,
+        logout
+    }
+
+    return (
+        <AuthContext.Provider value={value}>
+            {children}
+        </AuthContext.Provider>
+    )
 }
