@@ -1,18 +1,33 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import './Login.css';
 import Navbar from '../components/Navbar';
+import { supabase } from '../utils/supabase'
 
 function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
 
+    const navigate = useNavigate()
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         console.log(email, password)
+
+        const { error } = await supabase.auth.signInWithPassword({
+            email,
+            password
+        })
+
+        if (error) {
+            console.error(error)
+            return
+        }
+
+        navigate("/admin")
     };
 
     return (
@@ -62,11 +77,9 @@ function Login() {
                             </div>
                         </div>
 
-                        <Link to='/admin'>
-                            <button type="submit" className="login-button">
-                                Accedi
-                            </button>
-                        </Link>
+                        <button type="submit" className="login-button">
+                            Accedi
+                        </button>
 
                     </form>
 

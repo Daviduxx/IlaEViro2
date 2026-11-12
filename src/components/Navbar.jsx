@@ -1,8 +1,10 @@
-
+import useAuth from '../context/Authcontext'
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
+
+    const { session, logout } = useAuth()
     return (
         <nav className="navbar">
 
@@ -11,11 +13,8 @@ function Navbar() {
             </Link>
 
             <div className="navbar-links">
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/guestbook">Guestbook</NavLink>
-                <NavLink to="/lista-nozze">Lista Nozze</NavLink>
                 <NavLink to="/login">Login</NavLink>
-                <NavLink to="/">Logout</NavLink>
+                <button onClick={logout} className={`${session ? '' : 'notVisible'}`}>Logout</button>
             </div>
 
         </nav>
