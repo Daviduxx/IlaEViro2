@@ -6,6 +6,7 @@ import Login from './pages/Login.jsx'
 import Admin from './pages/Admin.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AuthProvider from './context/Authcontext.jsx'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/admin',
-    element: <Admin></Admin>
+    element: (
+      <ProtectedRoute>
+        <Admin></Admin>
+      </ProtectedRoute>
+    )
   }
 ])
 
