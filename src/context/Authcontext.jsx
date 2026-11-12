@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
 
             const currentSession = data.session
             setSession(currentSession);
-            setUser(currentSession.user)
+            setUser(currentSession?.user)
 
             setLoading(false)
 
@@ -34,7 +34,7 @@ export function AuthProvider({ children }) {
 
         const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
             setSession(session);
-            setUser(session.user)
+            setUser(session?.user)
 
             if (!session) {
                 setSession(false)
@@ -69,3 +69,5 @@ export function AuthProvider({ children }) {
 export function useAuth() {
     return useContext(AuthContext);
 }
+
+export default AuthContext;

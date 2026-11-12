@@ -5,7 +5,7 @@ import App from './App.jsx'
 import Login from './pages/Login.jsx'
 import Admin from './pages/Admin.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import AuthProvider from './context/Authcontext.jsx'
+import { AuthProvider } from './context/Authcontext.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 const router = createBrowserRouter([

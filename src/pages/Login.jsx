@@ -62,6 +62,7 @@ function Login() {
 
                             <div className="password-wrapper">
                                 <input
+                                    type="password"
                                     id="password"
                                     placeholder="Inserisci la password"
                                     value={password}

@@ -1,8 +1,8 @@
-import useAuth from '../context/Authcontext'
+import { useAuth } from '../context/Authcontext.jsx'
 import Loader from '../pages/Loader.jsx'
-import Navigate from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
-function ProtectedRoute({ childred }) {
+function ProtectedRoute({ children }) {
 
     const { session, loading } = useAuth();
 
@@ -14,7 +14,7 @@ function ProtectedRoute({ childred }) {
         return <Navigate to="/login" />
     }
 
-    return childred
+    return children
 }
 
 export default ProtectedRoute;

@@ -1,4 +1,4 @@
-import useAuth from '../context/Authcontext'
+import { useAuth } from '../context/Authcontext.jsx'
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 
