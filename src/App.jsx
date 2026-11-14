@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import Rsvp from './components/rsvp'
 import './App.css'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <Navbar></Navbar>
       <h1>Hello world!</h1>
+      <Rsvp></Rsvp>
     </>
   )
 }
