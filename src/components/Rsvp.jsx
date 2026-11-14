@@ -3,7 +3,7 @@ import { useState } from "react";
 function Rsvp() {
 
     const [formData, setFormData] = useState({
-        partecipa: true,
+        partecipa: 'si',
         nomi: '',
         numeroTotale: 0,
         numeroBambini: 0,
@@ -35,16 +35,14 @@ function Rsvp() {
 
             {/* Partecipazione */}
             <div>
-                <p>Parteciperai?</p>
+                <p>Parteciperi?</p>
 
                 <label>
                     <input
                         type="radio"
-                        name="partecipo"
+                        name="partecipa"
                         value="si"
-                        checked={formData.partecipo === true}
-                        onChange={handleChange}
-                        required
+                        checked
                     />
                     Sì
                 </label>
@@ -52,10 +50,8 @@ function Rsvp() {
                 <label>
                     <input
                         type="radio"
-                        name="partecipo"
+                        name="partecipa"
                         value="no"
-                        checked={formData.partecipo === false}
-                        onChange={handleChange}
                     />
                     No
                 </label>
