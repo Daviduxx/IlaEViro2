@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar'
-import Rsvp from './components/rsvp'
+import Rsvp from './components/Rsvp'
 import './App.css'
 
 function App() {

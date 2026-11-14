@@ -3,7 +3,7 @@ import { useState } from "react";
 function Rsvp() {
 
     const [formData, setFormData] = useState({
-        partecipa: 'si',
+        partecipa: true,
         nomi: '',
         numeroTotale: 0,
         numeroBambini: 0,
@@ -16,7 +16,7 @@ function Rsvp() {
 
         setFormData({
             ...formData,
-            [name]: value
+            [name]: name === 'partecipa' ? value === 'si' : value
         })
 
     }
@@ -42,7 +42,8 @@ function Rsvp() {
                         type="radio"
                         name="partecipa"
                         value="si"
-                        checked
+                        checked={formData.partecipa === true}
+                        onChange={handleChange}
                     />
                     Sì
                 </label>
@@ -52,6 +53,8 @@ function Rsvp() {
                         type="radio"
                         name="partecipa"
                         value="no"
+                        checked={formData.partecipa === false}
+                        onChange={handleChange}
                     />
                     No
                 </label>
@@ -73,14 +76,14 @@ function Rsvp() {
 
             {/* Numero totale */}
             <div>
-                <label htmlFor="totale">
+                <label htmlFor="numeroTotale">
                     Numero totale di partecipanti
                 </label>
                 <input
                     type="number"
-                    id="totale"
-                    name="totale"
-                    value={formData.totale}
+                    id="numeroTotale"
+                    name="numeroTotale"
+                    value={formData.numeroTotale}
                     onChange={handleChange}
                     min="0"
                 />
@@ -88,14 +91,14 @@ function Rsvp() {
 
             {/* Numero bambini */}
             <div>
-                <label htmlFor="bambini">
+                <label htmlFor="numeroBambini">
                     Numero di bambini
                 </label>
                 <input
                     type="number"
-                    id="bambini"
-                    name="bambini"
-                    value={formData.bambini}
+                    id="numeroBambini"
+                    name="numeroBambini"
+                    value={formData.numeroBambini}
                     onChange={handleChange}
                     min="0"
                 />
