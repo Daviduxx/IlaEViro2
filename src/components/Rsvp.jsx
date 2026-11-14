@@ -35,7 +35,7 @@ function Rsvp() {
 
             {/* Partecipazione */}
             <div>
-                <p>Parteciperi?</p>
+                <p>Parteciperai?</p>
 
                 <label>
                     <input
