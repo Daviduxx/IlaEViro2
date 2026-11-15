@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from '../utils/supabase.jsx'
 
 function Rsvp() {
 
@@ -20,8 +21,23 @@ function Rsvp() {
         })
 
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const { error } = await supabase
+            .from('OSPITI')
+            .insert({
+                partecipa: formData.partecipa,
+                nomi: formData.nomi,
+                numeroTotale: 0,
+                numeroBambini: 0,
+                intolleranze: '',
+                messaggio: ''
+            })
+
+        if (error) {
+            console.error(error)
+        }
 
         console.log(formData)
     }
