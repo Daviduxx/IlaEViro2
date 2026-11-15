@@ -1,0 +1,14 @@
+.underFold {
+    background-color: var(--color-gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // orizzontale
+    align-items: center; // verticale
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+
+    img {
+        max-width: 85%;
+
+    }
+}

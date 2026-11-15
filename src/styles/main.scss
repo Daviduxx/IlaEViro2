@@ -1,0 +1,45 @@
+@use './variables';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-champagne);
+    color: var(--color-midnight);
+    font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--color-midnight)
+}
+
+button,
+input,
+textarea {
+    font-family: var(--font-ui);
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    padding: var(--space-md);
+}

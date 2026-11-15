@@ -1,6 +1,5 @@
 import Navbar from './components/Navbar'
-import Rsvp from './components/rsvp'
-import Camere from './components/Camere'
+import Home from './pages/Home'
 import './App.css'
 
 function App() {
@@ -9,9 +8,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <h1>Hello world!</h1>
-      <Rsvp></Rsvp>
-      <Camere></Camere>
+      <Home></Home>
     </>
   )
 }
