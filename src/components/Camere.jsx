@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { supabase } from '../utils/supabase.jsx'
 
 function Camere() {
 
     const [formData, setFormData] = useState({
-        camera: true,
         nome: '',
         numeroPersone: 0,
         lettiAggiuntivi: 0,
@@ -19,9 +19,21 @@ function Camere() {
         })
 
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
+        const { error } = await supabase
+            .from('CAMERE')
+            .insert({
+                nome: formData.nome,
+                numero_persone: formData.numeroPersone,
+                letti_aggiuntivi: formData.lettiAggiuntivi,
+                messaggio: formData.messaggio
+            })
+
+        if (error) {
+            console.error(error)
+        }
         console.log(formData)
     }
 
@@ -31,33 +43,6 @@ function Camere() {
         <form onSubmit={handleSubmit}>
 
             <h2>Compila il form se hai piacere di passarela notte in location</h2>
-
-            {/* Partecipazione */}
-            <div>
-                <p>Ti serve una camera?</p>
-
-                <label>
-                    <input
-                        type="radio"
-                        name="camera"
-                        value="si"
-                        checked={formData.camera === true}
-                        onChange={handleChange}
-                    />
-                    Sì
-                </label>
-
-                <label>
-                    <input
-                        type="radio"
-                        name="camera"
-                        value="no"
-                        checked={formData.camera === false}
-                        onChange={handleChange}
-                    />
-                    No
-                </label>
-            </div>
 
             {/* Nome */}
             <div>
@@ -100,21 +85,6 @@ function Camere() {
                     value={formData.lettiAggiuntivi}
                     onChange={handleChange}
                     min="0"
-                />
-            </div>
-
-            {/* Messaggio */}
-            <div>
-                <label htmlFor="intolleranze">
-                    Per favore, segnala qui eventuali intolleranze, allergie o altre esigenze alimentari
-                </label>
-                <textarea
-                    id="intolleranze"
-                    name="intolleranze"
-                    value={formData.intolleranze}
-                    onChange={handleChange}
-                    placeholder="Scrivi qui eventuali intolleranze, allergie o altre esigenze alimentari..."
-                    rows="4"
                 />
             </div>
 
