@@ -1,14 +1,30 @@
+.container {
+    margin-top: 60px;
+}
+
 .underFold {
     background-color: var(--color-gold);
     display: flex;
     flex-direction: column;
     justify-content: center; // orizzontale
     align-items: center; // verticale
-    margin-top: var(--space-lg);
+    margin-top: 10rem;
     padding: var(--space-md);
 
     img {
         max-width: 85%;
-
+        transform: translateY(-70px);
     }
+}
+
+.sposi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: var(--space-md);
 }
