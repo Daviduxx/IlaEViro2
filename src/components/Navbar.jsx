@@ -1,5 +1,5 @@
 import { useAuth } from '../context/Authcontext.jsx'
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar() {
@@ -9,11 +9,10 @@ function Navbar() {
         <nav className="navbar">
 
             <Link to="/" className="navbar-logo">
-                IlaViro
+                <img src="/public/logo.png" alt="" className='logo' />
             </Link>
 
             <div className="navbar-links">
-                <NavLink to="/login">Login</NavLink>
                 <button onClick={logout} className={`${session ? '' : 'notVisible'}`}>Logout</button>
             </div>
 

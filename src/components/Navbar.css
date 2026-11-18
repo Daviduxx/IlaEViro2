@@ -1,3 +1,11 @@
 .notVisible {
     display: none;
 }
+
+nav {
+    background-color: #ffffff00
+}
+
+img.logo {
+    width: 50px
+}

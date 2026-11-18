@@ -1,5 +1,5 @@
 import '../styles/AboveFold.scss'
-import SectionDivider from './/SectionDivider'
+import SectionDivider from './SectionDivider'
 import Button from './Button';
 
 function Abovefold() {
@@ -8,7 +8,7 @@ function Abovefold() {
             <div className="container">
                 <h3>Il matrimonio di</h3>
                 <h1>Ilaria & Giulio</h1>
-                <h2>Una storia vivere con voi</h2>
+                <h2>Una storia da vivere con voi</h2>
                 <SectionDivider></SectionDivider>
                 <h4>Siamo lieti di invitarvi ufficialmente alla prima cinematografica più attessa dell'anno!</h4>
                 <Button onClick={() => {

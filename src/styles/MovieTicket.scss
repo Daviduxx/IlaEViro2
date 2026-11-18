@@ -1,0 +1,113 @@
+.movie-ticket {
+    display: flex;
+    width: min(90%, 650px);
+    min-height: 220px;
+    margin: 40px auto;
+
+    background: var(--color-old-paper);
+    color: var(--color-champagne);
+
+    border: 1px solid var(--color-gold);
+    border-radius: 5px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    position: relative;
+    overflow: hidden;
+}
+
+// Parte principale
+.ticket-main {
+    flex: 1;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    h2 {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        letter-spacing: 4px;
+        margin: 10px 0;
+        color: var(--color-champagne);
+    }
+}
+
+.ticket-label,
+.stub-label {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--color-sepia);
+}
+
+.ticket-divider {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-gold);
+
+    &::before,
+    &::after {
+        content: "";
+        height: 1px;
+        flex: 1;
+        background: var(--color-gold);
+    }
+}
+
+.ticket-couple {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    margin-top: 12px;
+
+    span {
+        color: var(--color-hollywood-red);
+        font-style: italic;
+    }
+}
+
+.ticket-description {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+// Tagliando laterale
+.ticket-stub {
+    width: 125px;
+    border-left: 2px dashed var(--color-gold);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.ticket-icon {
+    font-size: 2rem;
+    color: var(--color-hollywood-red);
+}
+
+.stub-number,
+.stub-bottom {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.stub-bottom {
+    color: var(--color-sepia);
+}
+
+.ticketCntainer {
+    background-color: var(--color-hollywood-red);
+}
