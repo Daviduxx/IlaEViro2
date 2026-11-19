@@ -58,7 +58,7 @@ function PhotoCarousel({ photos }) {
             <div className="carousel-heading">
                 <span>OUR MEMORIES</span>
                 <h2>La nostra storia in immagini</h2>
-                <p>Ogni fotografia racconta un piccolo pezzo di noi.</p>
+                <p>Ogni fotografia racconta un frame del nostro film</p>
             </div>
 
             <div className="carousel-container">

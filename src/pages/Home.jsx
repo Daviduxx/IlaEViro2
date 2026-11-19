@@ -8,24 +8,49 @@ function Home() {
 
     const weddingPhotos = [
         {
-            src: '/images/gallery/foto1.webp',
+            src: '/1.webp',
             alt: 'Un momento insieme',
-            caption: 'Il nostro primo ricordo'
+            caption: 'Amavamo il vintage da prima che andasse di moda!'
         },
         {
-            src: '/images/gallery/foto2.webp',
+            src: '/5.webp',
             alt: 'Un viaggio insieme',
-            caption: 'Avventure da condividere'
-        },
-        {
-            src: '/images/gallery/foto3.webp',
-            alt: 'Un momento speciale',
             caption: 'Una storia speciale'
         },
         {
-            src: '/images/gallery/foto4.webp',
+            src: '/3.webp',
+            alt: 'Un momento speciale',
+            caption: 'Avventure da condividere'
+        },
+        {
+            src: '/4.webp',
             alt: 'Un giorno felice',
-            caption: 'E tanti altri ancora'
+            caption: 'Stiamo bene nei panni dei Peky Blinders!'
+        },
+        {
+            src: '/2.webp',
+            alt: 'Un giorno felice',
+            caption: 'Il cinema: ci ha sempre legati!'
+        },
+        {
+            src: '/6.webp',
+            alt: 'Un giorno felice',
+            caption: 'Attimi in cui ci siamo solo noi due'
+        },
+        {
+            src: '/7.webp',
+            alt: 'Un giorno felice',
+            caption: 'Il nostro cuore è sempre stato punk!'
+        },
+        {
+            src: '/8.webp',
+            alt: 'Un giorno felice',
+            caption: 'Abbiamo vissuto tanti momenti felici'
+        },
+        {
+            src: '/9.webp',
+            alt: 'Un giorno felice',
+            caption: 'E vogliamo viverne tanti altri ancora'
         }
     ];
 
