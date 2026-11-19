@@ -3,6 +3,8 @@ import Rsvp from '../components/Rsvp'
 import Camere from '../components/Camere'
 import Abovefold from '../components/AboveFold';
 import PhotoCarousel from '../components/PhotoCarousel';
+import ThankYou from '../components/ThankYou';
+import Countdown from '../components/Countdown';
 
 function Home() {
 
@@ -61,6 +63,8 @@ function Home() {
             <Rsvp></Rsvp>
             <Camere></Camere>
             <PhotoCarousel photos={weddingPhotos}></PhotoCarousel>
+            <ThankYou></ThankYou>
+            <Countdown></Countdown>
         </>
     )
 }

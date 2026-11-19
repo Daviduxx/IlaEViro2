@@ -1,0 +1,46 @@
+.countdown {
+    text-align: center;
+    padding: 60px 20px;
+    color: #f5ead8;
+}
+
+.countdown h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+
+.countdown p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin: 20px 0 35px;
+    opacity: 0.8;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 65px;
+}
+
+.countdown-item span {
+    font-family: 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.countdown-item small {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}

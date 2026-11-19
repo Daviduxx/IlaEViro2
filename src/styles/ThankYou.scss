@@ -1,0 +1,161 @@
+.thankyou-section {
+    position: relative;
+    padding: 100px 20px;
+    color: var(--color-champagne);
+    text-align: center;
+
+    // Lascia trasparire lo sfondo globale
+    background: transparent;
+
+    .thankyou-content {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    .thankyou-eyebrow {
+        color: var(--color-gold);
+        font-family: var(--font-ui);
+        font-size: 0.7rem;
+        letter-spacing: 4px;
+    }
+
+    h2 {
+        font-family: var(--font-heading);
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+        font-weight: 500;
+        margin: 20px 0;
+    }
+
+    .thankyou-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        color: var(--color-gold);
+        margin: 25px auto;
+
+        &::before,
+        &::after {
+            content: "";
+            width: 70px;
+            height: 1px;
+            background: var(--color-gold);
+            opacity: 0.7;
+        }
+    }
+
+    .thankyou-message {
+        max-width: 570px;
+        margin: 0 auto 45px;
+        color: var(--color-old-paper);
+        font-size: 0.9rem;
+        line-height: 2;
+    }
+
+    .gift-card {
+        position: relative;
+        max-width: 520px;
+        margin: 0 auto;
+        padding: 45px 35px;
+
+        background: rgba(25, 24, 23, 0.88);
+        border: 1px solid var(--color-gold);
+        outline: 1px solid var(--color-gold);
+        outline-offset: 5px;
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+        .gift-card-label {
+            color: var(--color-gold);
+            font-family: var(--font-ui);
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+        }
+
+        .gift-icon {
+            font-size: 2.5rem;
+            color: var(--color-gold);
+            margin: 20px 0 10px;
+        }
+
+        .gift-card-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 30px;
+
+        }
+    }
+
+    .gift-details {
+        margin-top: 20px;
+        padding: 20px 0;
+        border-top: 1px solid rgba(184, 154, 99, 0.4);
+        border-bottom: 1px solid rgba(184, 154, 99, 0.4);
+
+        span {
+            display: block;
+            color: var(--color-gold);
+            font-family: var(--font-ui);
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            margin: 20px 0 8px;
+        }
+
+        p {
+            color: var(--color-old-paper);
+            font-size: 0.9rem;
+            overflow-wrap: anywhere;
+        }
+
+        .gift-iban {
+            font-family: var(--font-ui);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+    }
+
+    .gift-copy-button {
+        margin-top: 30px;
+        padding: 15px 25px;
+
+        background: var(--color-hollywood-red);
+        color: var(--color-champagne);
+
+        border: 1px solid var(--color-gold);
+        font-family: var(--font-ui);
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+            background: var(--color-midnight);
+            color: var(--color-gold);
+            transform: translateY(-3px);
+        }
+    }
+
+    .thankyou-footer {
+        margin-top: 55px;
+        color: var(--color-gold);
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+}
+
+@media (max-width: 600px) {
+    .thankyou-section {
+        padding: 70px 25px;
+
+        .gift-card {
+            padding: 35px 20px;
+        }
+
+        .gift-details .gift-iban {
+            font-size: 0.8rem;
+        }
+    }
+}
