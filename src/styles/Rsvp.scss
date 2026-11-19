@@ -66,7 +66,7 @@
                 padding: 14px 16px;
                 background: rgba(243, 235, 221, 0.07);
                 border: 1px solid rgba(184, 154, 99, 0.5);
-                color: var(--color-champagne);
+                color: rgba(243, 235, 221, 0.4);
                 font-family: var(--font-body);
                 font-size: 0.85rem;
                 outline: none;
@@ -74,7 +74,6 @@
                     background 0.3s ease;
 
                 &::placeholder {
-                    color: rgba(243, 235, 221, 0.4);
                     font-style: italic;
                 }
 
@@ -88,10 +87,6 @@
                 resize: vertical;
                 min-height: 110px;
             }
-
-            input[type="number"] {
-                max-width: 150px;
-            }
         }
 
         .attendance-options {
@@ -102,7 +97,7 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                color: var(--color-champagne);
+                color: var(--color-old-paper);
                 cursor: pointer;
                 font-family: var(--font-body);
                 font-size: 0.9rem;
@@ -111,7 +106,7 @@
             input[type="radio"] {
                 width: 17px;
                 height: 17px;
-                accent-color: var(--color-hollywood-red);
+                accent-color: var(--color-old-paper);
                 cursor: pointer;
             }
         }
@@ -142,6 +137,11 @@
                 color: var(--color-gold);
                 transform: translateY(-3px);
             }
+        }
+
+        img {
+            width: 30%;
+            margin: 20px auto;
         }
     }
 }

@@ -48,6 +48,8 @@ function Rsvp() {
         <section className="rsvp-section">
             <form className="rsvp-form" onSubmit={handleSubmit}>
 
+                <img src="/movie-ticket.png" alt="" srcset="" />
+
                 <h2>Conferma la tua partecipazione</h2>
 
                 <p className="rsvp-intro">
@@ -59,7 +61,7 @@ function Rsvp() {
 
                 {/* Partecipazione */}
                 <div className="form-group">
-                    <p className="form-label">Partedasdgasciperai?</p>
+                    <p className="form-label">Parteciperai?</p>
                     <div className="attendance-options">
                         <label>
                             <input
@@ -85,7 +87,7 @@ function Rsvp() {
                     </div>
                 </div>
                 {/* Nomi */}
-                <div>
+                <div className="form-group">
                     <label htmlFor="nome">Nomi</label>
                     <input
                         type="text"
@@ -99,7 +101,7 @@ function Rsvp() {
                 </div>
 
                 {/* Numero totale */}
-                <div>
+                <div className="form-group">
                     <label htmlFor="numeroTotale">
                         Numero totale di partecipanti
                     </label>
@@ -114,7 +116,7 @@ function Rsvp() {
                 </div>
 
                 {/* Numero bambini */}
-                <div>
+                <div className="form-group">
                     <label htmlFor="numeroBambini">
                         Numero di bambini
                     </label>
@@ -129,7 +131,7 @@ function Rsvp() {
                 </div>
 
                 {/* Intolleranze */}
-                <div>
+                <div className="form-group">
                     <label htmlFor="intolleranze">
                         Per favore, segnala qui eventuali intolleranze, allergie o altre esigenze alimentari
                     </label>
@@ -144,7 +146,7 @@ function Rsvp() {
                 </div>
 
                 {/* Messaggio */}
-                <div>
+                <div className="form-group">
                     <label htmlFor="messaggio">
                         Desideri lasciarci un messaggio? Scrivi qui!
                     </label>
