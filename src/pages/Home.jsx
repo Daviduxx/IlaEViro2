@@ -5,6 +5,7 @@ import Abovefold from '../components/AboveFold';
 import PhotoCarousel from '../components/PhotoCarousel';
 import ThankYou from '../components/ThankYou';
 import Countdown from '../components/Countdown';
+import Footer from '../components/Footer';
 
 function Home() {
 
@@ -65,6 +66,7 @@ function Home() {
             <PhotoCarousel photos={weddingPhotos}></PhotoCarousel>
             <ThankYou></ThankYou>
             <Countdown></Countdown>
+            <Footer></Footer>
         </>
     )
 }

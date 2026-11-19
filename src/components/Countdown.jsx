@@ -49,7 +49,7 @@ function Countdown() {
                 ))}
             </div>
 
-            <img src="/logo.png" alt="" srcset="" />
+            <img src="/logo.png" alt="" />
         </section>
     );
 }
