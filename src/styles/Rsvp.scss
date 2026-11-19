@@ -1,0 +1,165 @@
+.rsvp-section {
+    padding: 80px 20px;
+    color: var(--color-champagne);
+
+    .rsvp-form {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 50px;
+        background: rgba(25, 24, 23, 0.92);
+        border: 1px solid var(--color-gold);
+        outline: 1px solid var(--color-gold);
+        outline-offset: 5px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .rsvp-intro {
+            text-align: center;
+            color: var(--color-old-paper);
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .rsvp-divider {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--color-gold);
+            margin: 30px 0;
+
+            &::before,
+            &::after {
+                content: "";
+                height: 1px;
+                flex: 1;
+                background: var(--color-gold);
+                opacity: 0.6;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 25px;
+
+            label,
+            .form-label {
+                font-family: var(--font-ui);
+                font-size: 0.8rem;
+                letter-spacing: 0.5px;
+                color: var(--color-gold);
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 14px 16px;
+                background: rgba(243, 235, 221, 0.07);
+                border: 1px solid rgba(184, 154, 99, 0.5);
+                color: var(--color-champagne);
+                font-family: var(--font-body);
+                font-size: 0.85rem;
+                outline: none;
+                transition: border-color 0.3s ease,
+                    background 0.3s ease;
+
+                &::placeholder {
+                    color: rgba(243, 235, 221, 0.4);
+                    font-style: italic;
+                }
+
+                &:focus {
+                    border-color: var(--color-gold);
+                    background: rgba(243, 235, 221, 0.12);
+                }
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 110px;
+            }
+
+            input[type="number"] {
+                max-width: 150px;
+            }
+        }
+
+        .attendance-options {
+            display: flex;
+            gap: 30px;
+
+            label {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: var(--color-champagne);
+                cursor: pointer;
+                font-family: var(--font-body);
+                font-size: 0.9rem;
+            }
+
+            input[type="radio"] {
+                width: 17px;
+                height: 17px;
+                accent-color: var(--color-hollywood-red);
+                cursor: pointer;
+            }
+        }
+
+        .rsvp-submit {
+            display: block;
+            margin: 40px auto 0;
+            padding: 16px 30px;
+
+            background: var(--color-hollywood-red);
+            color: var(--color-champagne);
+
+            border: 1px solid var(--color-gold);
+            outline: 1px solid var(--color-gold);
+            outline-offset: 4px;
+
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: var(--color-midnight);
+                color: var(--color-gold);
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .rsvp-section {
+        padding: 55px 20px;
+
+        .rsvp-form {
+            padding: 30px 20px;
+
+            .attendance-options {
+                gap: 20px;
+            }
+
+            .rsvp-submit {
+                width: 100%;
+            }
+        }
+    }
+}
