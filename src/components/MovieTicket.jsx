@@ -1,4 +1,5 @@
 import '../styles/MovieTicket.scss';
+import LocationButton from './LocationButton';
 
 function MovieTicket() {
     return (
@@ -12,7 +13,7 @@ function MovieTicket() {
                     <h2>CASTELLO PIPPO</h2>
 
                     <p className="ticket-couple">
-                        La Loggia
+                        La Loggia (TO)
                     </p>
 
                     <p className="ticket-description">
@@ -33,6 +34,7 @@ function MovieTicket() {
                 </div>
 
             </div>
+            <LocationButton />
         </div>
     );
 }

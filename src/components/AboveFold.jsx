@@ -1,11 +1,13 @@
 import '../styles/AboveFold.scss'
 import SectionDivider from './SectionDivider'
 import Button from './Button';
+import Navbar from './Navbar';
 
 function Abovefold() {
     return (
         <>
             <div className="container">
+                <Navbar></Navbar>
                 <h3>Il matrimonio di</h3>
                 <h1>Ilaria & Giulio</h1>
                 <h2>Una storia da vivere con voi</h2>

@@ -1,5 +1,4 @@
-
-import './Button.scss';
+import '../styles/Button.scss';
 
 function Button({ onClick }) {
     return (
