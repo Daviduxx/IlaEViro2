@@ -45,7 +45,7 @@ function Rsvp() {
 
     return (
 
-        <section className="rsvp-section">
+        <section className="rsvp-section" id="rsvp">
             <form className="rsvp-form" onSubmit={handleSubmit}>
 
                 <img src="/movie-ticket.png" alt="" srcset="" />
