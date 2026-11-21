@@ -8,7 +8,6 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     padding: 0 var(--space-md);
-
 }
 
 .underFold {
@@ -21,7 +20,8 @@
     padding: var(--space-md);
 
     img {
-        max-width: 85%;
+        width: 85%;
+        max-width: 700px;
         transform: translateY(-70px);
     }
 }
@@ -36,4 +36,20 @@
 
 h3 {
     margin-bottom: var(--space-md);
+}
+
+/* Laptop e desktop */
+@media screen and (min-width: 1024px) {
+    .container {
+        background-position: 50% 40%;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+/* Schermi desktop molto larghi */
+@media screen and (min-width: 1600px) {
+    .container {
+        background-position: 50% 40%;
+    }
 }
