@@ -191,6 +191,17 @@
     opacity: 0.8;
 }
 
+.form-error {
+    color: var(--color-hollywood-red);
+    background-color: var(--color-old-paper);
+    margin-top: var(--space-md);
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

@@ -61,7 +61,7 @@ function Camere() {
                 !inviato ? (
                     <form className="rsvp-form" onSubmit={handleSubmit}>
 
-                        <img src="/video-player.png" alt="" srcset="" />
+                        <img src="/video-player.png" alt="" />
 
                         <h2>Compila il form se hai piacere di passarela notte in location</h2>
 

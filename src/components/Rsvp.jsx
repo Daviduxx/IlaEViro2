@@ -16,6 +16,21 @@ function Rsvp() {
 
     const [inviato, setInviato] = useState(false)
     const [showSuccess, setShowSuccess] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("")
+
+    const handleError = (err) => {
+
+        switch (err.code) {
+            case '23501':
+                return 'Attenzione! I campi "Partecipa", "Nomi", "Numero totale partecipanti" sono obbligatori. Controlla di averli inseriti correttamente!'
+            case '22P02':
+                return 'Attenzione! Inserisci un numero valido!'
+            case '23514':
+                return 'Attenzione! I campi "Nomi" non possono superare i 100 caratteri, mentre il messaggio e il campo per le intolleranze non possono superare i 500 caratteri. Il numero di partecipanti ed il numero bambini non può essere mionore di 0 o maggiore di 10.';
+            default:
+                return 'Attenzione! Si è verificato un problema. Verifica che i campi siano inseriti correttamente'
+        }
+    }
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -26,6 +41,7 @@ function Rsvp() {
         })
 
     }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -42,6 +58,8 @@ function Rsvp() {
 
         if (error) {
             console.error(error)
+            setErrorMessage(handleError(error))
+            setShowSuccess(false);
         } else {
             setInviato(true)
             console.log(formData)
@@ -55,6 +73,7 @@ function Rsvp() {
                 messaggio: ''
             })
             setShowSuccess(true);
+            setErrorMessage("");
         }
 
 
@@ -69,7 +88,7 @@ function Rsvp() {
                 !inviato ? (
                     <form className="rsvp-form" onSubmit={handleSubmit}>
 
-                        <img src="/movie-ticket.png" alt="" srcset="" />
+                        <img src="/movie-ticket.png" alt="" />
 
                         <h2>Conferma la tua partecipazione</h2>
 
@@ -117,7 +136,7 @@ function Rsvp() {
                                 value={formData.nomi}
                                 onChange={handleChange}
                                 placeholder="Inserisci i nomi dei partecipanti"
-                                required
+
                             />
                         </div>
 
@@ -186,7 +205,14 @@ function Rsvp() {
                             ✦ Invia conferma ✦
                         </button>
 
+                        <div className={`form-error ${errorMessage ? 'visible' : ''}`}>
+                            {errorMessage}
+                        </div>
+
                     </form>
+
+
+
                 ) : (
                     <div className="success-message" id="feedback">
                         <h2>Grazie!</h2>
