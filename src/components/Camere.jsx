@@ -14,6 +14,21 @@ function Camere() {
 
     const [inviato, setInviato] = useState(false)
     const [showSuccess, setShowSuccess] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("")
+
+    const handleError = (err) => {
+
+        switch (err.code) {
+            case '23501':
+                return 'Attenzione! Controlla di averli inserito correttamente i campi obbligatori!'
+            case '22P02':
+                return 'Attenzione! Inserisci un numero valido!'
+            case '23514':
+                return 'Attenzione! I campi "Nomi" non possono superare i 100 caratteri, mentre il messaggio non può superare i 500 caratteri. Il numero di persone ed il numero di letti aggiuntivi non può essere mionore di 0 o maggiore di 10.';
+            default:
+                return 'Attenzione! Si è verificato un problema. Verifica che i campi siano inseriti correttamente'
+        }
+    }
 
 
     const handleChange = (e) => {
@@ -39,6 +54,8 @@ function Camere() {
 
         if (error) {
             console.error(error)
+            setErrorMessage(handleError(error))
+            setShowSuccess(false);
         } else {
             console.log(formData)
             setInviato(true)
@@ -50,6 +67,7 @@ function Camere() {
                 messaggio: ''
             })
             setShowSuccess(true);
+            setErrorMessage("");
         }
     }
 
@@ -76,6 +94,7 @@ function Camere() {
                                 onChange={handleChange}
                                 placeholder="Es. Mario Rossi"
                                 required
+                                maxLength={100}
                             />
                         </div>
 
@@ -91,6 +110,8 @@ function Camere() {
                                 value={formData.numeroPersone}
                                 onChange={handleChange}
                                 min="0"
+                                max="10"
+                                required
                             />
                         </div>
 
@@ -106,6 +127,7 @@ function Camere() {
                                 value={formData.lettiAggiuntivi}
                                 onChange={handleChange}
                                 min="0"
+                                max="5"
                             />
                         </div>
 
@@ -121,13 +143,16 @@ function Camere() {
                                 onChange={handleChange}
                                 placeholder="Scrivi qui eventuali comunicazioni..."
                                 rows="4"
+                                maxLength={500}
                             />
                         </div>
 
                         <button className="rsvp-submit" type="submit">
                             Invia conferma
                         </button>
-
+                        <div className={`form-error ${errorMessage ? 'visible' : ''}`}>
+                            {errorMessage}
+                        </div>
                     </form>
 
                 ) : (
