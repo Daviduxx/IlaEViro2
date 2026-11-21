@@ -82,7 +82,7 @@ function Rsvp() {
 
     return (
 
-        <section className="rsvp-section">
+        <section className="rsvp-section" id="rsvp">
 
             {
                 !inviato ? (
