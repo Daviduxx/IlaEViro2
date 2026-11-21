@@ -136,6 +136,7 @@ function Rsvp() {
                                 value={formData.nomi}
                                 onChange={handleChange}
                                 placeholder="Inserisci i nomi dei partecipanti"
+                                maxLength={100}
 
                             />
                         </div>
@@ -152,6 +153,8 @@ function Rsvp() {
                                 value={formData.numeroTotale}
                                 onChange={handleChange}
                                 min="0"
+                                max="10"
+                                required
                             />
                         </div>
 
@@ -167,6 +170,7 @@ function Rsvp() {
                                 value={formData.numeroBambini}
                                 onChange={handleChange}
                                 min="0"
+                                max="10"
                             />
                         </div>
 
@@ -182,6 +186,7 @@ function Rsvp() {
                                 onChange={handleChange}
                                 placeholder="Scrivi qui eventuali intolleranze, allergie o altre esigenze alimentari..."
                                 rows="4"
+                                maxLength={500}
                             />
                         </div>
 
@@ -197,6 +202,7 @@ function Rsvp() {
                                 onChange={handleChange}
                                 placeholder="Scrivi qui eventuali comunicazioni..."
                                 rows="4"
+                                maxLength={500}
                             />
                         </div>
 
