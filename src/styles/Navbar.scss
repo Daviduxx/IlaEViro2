@@ -13,7 +13,7 @@ img.logo {
     padding: 20px 0px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     padding: var(--space-md);
-    background-color: transparent;
+    background-color: tr;
 }
 
 .navbar-logo {
@@ -26,20 +26,32 @@ img.logo {
 .navbar-links {
     display: flex;
     gap: 30px;
-}
 
-.navbar-links a {
-    text-decoration: none;
-    color: #555555;
-    font-size: 16px;
-    transition: color 0.2s;
-}
+    button {
+        display: block;
+        width: 100%;
+        padding: 16px 30px;
 
-.navbar-links a:hover {
-    color: #c17b84;
-}
+        background: var(--color-hollywood-red);
+        color: var(--color-champagne);
 
-.navbar-links a.active {
-    color: #c17b84;
-    font-weight: bold;
+        border: 1px solid var(--color-gold);
+        outline: 1px solid var(--color-gold);
+        outline-offset: 4px;
+
+        font-family: var(--font-ui);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: var(--color-midnight);
+            color: var(--color-gold);
+            transform: translateY(-3px);
+        }
+    }
 }

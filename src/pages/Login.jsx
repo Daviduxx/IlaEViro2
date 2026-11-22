@@ -36,7 +36,6 @@ function Login() {
             })
 
             if (error) {
-                console.error(error)
                 setErrorMessage("Le credenziali inserite non sono valide!")
                 return
             }
