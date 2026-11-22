@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import '../styles/Admin.scss';
 import OspitiAdmin from '../components/OspitiAdmin';
-
+import CamereAdmin from '../components/CamereAdmin'
 
 function Admin() {
 
@@ -11,6 +11,7 @@ function Admin() {
             <Navbar></Navbar>
             <h1>Gestione prentazioni e camere</h1>
             <OspitiAdmin></OspitiAdmin>
+            <CamereAdmin></CamereAdmin>
         </>
     );
 }
