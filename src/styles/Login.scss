@@ -118,3 +118,8 @@ input {
         transform: translateY(-3px);
     }
 }
+
+.errorMessage {
+    margin: var(--space-md) 0;
+    color: var(--color-hollywood-red);
+}

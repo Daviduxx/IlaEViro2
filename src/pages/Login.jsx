@@ -8,26 +8,43 @@ function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
+    const [errorMessage, setErrorMessage] = useState('')
 
     const navigate = useNavigate()
+
+    const validate = () => {
+        if (email.length > 0 && password.length > 0) {
+            return true;
+        } else {
+            setErrorMessage('Le credenziali inserite non sono valide!')
+            return false
+        }
+    }
 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        const validation = validate()
+
         console.log(email, password)
 
-        const { error } = await supabase.auth.signInWithPassword({
-            email,
-            password
-        })
+        if (validation) {
+            const { error } = await supabase.auth.signInWithPassword({
+                email,
+                password
+            })
 
-        if (error) {
-            console.error(error)
-            return
+            if (error) {
+                console.error(error)
+                setErrorMessage("Le credenziali inserite non sono valide!")
+                return
+            }
+
+            setErrorMessage('')
+            navigate("/admin")
         }
 
-        navigate("/admin")
     };
 
     return (
@@ -39,7 +56,7 @@ function Login() {
                 <div className="login-card">
 
                     <div className="login-header">
-                        <h2>IlaViro</h2>
+                        <h2>Giulio & Ilaria</h2>
                         <p>Accedi alla tua area riservata</p>
                     </div>
 
@@ -82,6 +99,8 @@ function Login() {
                         <button type="submit" className="login-button">
                             Accedi
                         </button>
+
+                        <p className='errorMessage'>{errorMessage}</p>
 
                     </form>
 
