@@ -1,6 +1,6 @@
 import { useAuth } from '../context/Authcontext.jsx'
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import '../styles/Navbar.scss';
 
 function Navbar() {
 

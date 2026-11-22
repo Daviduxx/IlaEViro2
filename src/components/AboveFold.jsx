@@ -1,7 +1,7 @@
 import '../styles/AboveFold.scss'
 import SectionDivider from './SectionDivider'
 import Button from './Button';
-import Navbar from './Navbar';
+import Navbar from './Navbar'
 
 function Abovefold() {
     return (

@@ -12,7 +12,8 @@ img.logo {
     align-items: center;
     padding: 20px 0px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    margin-bottom: 40px;
+    padding: var(--space-md);
+    background-color: transparent;
 }
 
 .navbar-logo {

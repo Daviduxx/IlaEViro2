@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import './Login.css';
+import '../styles/Login.scss'
 import Navbar from '../components/Navbar';
 import { supabase } from '../utils/supabase'
 
@@ -33,12 +33,13 @@ function Login() {
     return (
         <>
             <Navbar></Navbar>
+
             <div className="login-container">
 
                 <div className="login-card">
 
                     <div className="login-header">
-                        <h1>IlaViro</h1>
+                        <h2>IlaViro</h2>
                         <p>Accedi alla tua area riservata</p>
                     </div>
 
@@ -83,10 +84,6 @@ function Login() {
                         </button>
 
                     </form>
-
-                    <div className="login-footer">
-                        <p>Area riservata IlaViro</p>
-                    </div>
 
                 </div>
 
