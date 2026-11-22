@@ -12,6 +12,8 @@ function Ospiti() {
     const [ospiteInModifica, setOspiteInModifica] = useState(null);
     const [formData, setFormData] = useState({});
 
+    const [ospiteSelezionato, setOspiteSelezionato] = useState(null);
+
     // LETTURA OSPITI
     const getOspiti = async () => {
 
@@ -191,7 +193,7 @@ function Ospiti() {
 
                                 <tr key={ospite.id}>
                                     <td className="eye">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" className="bi bi-eye-fill" viewBox="0 0 16 16">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" className="bi bi-eye-fill" viewBox="0 0 16 16" onClick={() => setOspiteSelezionato(ospite)}>
                                             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
                                             <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
                                         </svg>
@@ -290,6 +292,42 @@ function Ospiti() {
                         </tbody>
 
                     </table>
+
+                    {ospiteSelezionato && (
+                        <div className="dettagli-overlay">
+
+                            <div className="dettagli-card">
+
+                                <button
+                                    type="button"
+                                    className="chiudi-dettagli"
+                                    onClick={() => setOspiteSelezionato(null)}
+                                >
+                                    ✕
+                                </button>
+
+                                <h2>Dettaglio ospite</h2>
+
+                                <div className="dettagli-content">
+
+                                    {Object.entries(ospiteSelezionato).map(([key, value]) => (
+                                        <div className="dettaglio-riga" key={key}>
+                                            <strong>{key}</strong>
+
+                                            <span>
+                                                {typeof value === "boolean"
+                                                    ? (value ? "Sì" : "No")
+                                                    : value ?? "-"}
+                                            </span>
+                                        </div>
+                                    ))}
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    )}
 
                 </div>
 

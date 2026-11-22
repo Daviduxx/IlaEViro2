@@ -77,3 +77,82 @@
     margin-top: 20px;
     color: var(--color-hollywood-red);
 }
+
+// Dettaglio ospite selezionato
+
+.dettagli-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+    padding: 20px;
+}
+
+.dettagli-card {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    background: var(--color-champagne);
+    color: var(--color-midnight);
+
+    border: 2px solid var(--color-gold);
+    padding: 35px;
+}
+
+.dettagli-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-midnight);
+}
+
+.dettagli-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dettaglio-riga {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-gold);
+}
+
+.dettaglio-riga strong {
+    text-transform: capitalize;
+}
+
+.dettaglio-riga span {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.chiudi-dettagli {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--color-midnight);
+}
+
+.btn-dettagli {
+    background: var(--color-midnight);
+    color: var(--color-champagne);
+    border: 1px solid var(--color-gold);
+    padding: 8px 14px;
+    cursor: pointer;
+}
