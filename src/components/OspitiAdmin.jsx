@@ -132,6 +132,7 @@ function Ospiti() {
             setOspiti(prev =>
                 prev.filter(ospite => ospite.id !== id)
             );
+            setErrorMessage('')
 
         } catch (error) {
 
