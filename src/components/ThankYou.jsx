@@ -4,7 +4,7 @@ import '../styles/ThankYou.scss';
 
 function ThankYou() {
     const [copied, setCopied] = useState(false);
-    const iban = 'IT00 X000 0000 0000 0000 0000 000'
+    const iban = 'IT50 K030 6930 5511 0000 0006 137'
     const copyIban = async () => {
         try {
             await navigator.clipboard.writeText(iban);
@@ -44,10 +44,10 @@ function ThankYou() {
                     <div className="gift-details">
 
                         <span>INTESTATARIO</span>
-                        <p>Ilaria e Giulio</p>
+                        <p>Ilaria Andrea Azimonti</p>
 
                         <span>IBAN</span>
-                        <p className="gift-iban">IT00 X000 0000 0000 0000 0000 000</p>
+                        <p className="gift-iban">IT50 K030 6930 5511 0000 0006 137</p>
 
                     </div>
 

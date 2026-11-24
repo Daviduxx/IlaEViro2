@@ -9,7 +9,7 @@ function Admin() {
     return (
         <>
             <Navbar></Navbar>
-            <h1>Gestione prentazioni e camere</h1>
+            <h1>Gestione prenotazioni e camere</h1>
             <OspitiAdmin></OspitiAdmin>
             <CamereAdmin></CamereAdmin>
         </>

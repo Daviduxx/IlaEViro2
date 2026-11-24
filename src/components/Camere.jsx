@@ -81,7 +81,7 @@ function Camere() {
 
                         <img src="/video-player.png" alt="" />
 
-                        <h2>Compila il form se hai piacere di passarela notte in location</h2>
+                        <h2>Compila il form se hai piacere di passare la notte in location</h2>
 
                         {/* Nome */}
                         <div className="form-group">
@@ -118,7 +118,7 @@ function Camere() {
                         {/* Numero letti aggiuntivi */}
                         <div className="form-group">
                             <label htmlFor="numeroBambini">
-                                Ogni camera è ha un letto matrimoniale per due persone. Indica qui se hai bisogno di uno o più letti aggintivi in camera
+                                Ogni camera ha un letto matrimoniale per due persone. Indica qui se hai bisogno di uno o più letti aggintivi.
                             </label>
                             <input
                                 type="number"

@@ -10,14 +10,14 @@ function MovieTicket() {
                 <div className="ticket-main">
                     <span className="ticket-label">L'EVENTO SI TERRÀ PRESSO</span>
 
-                    <h2>CASTELLO PIPPO</h2>
+                    <h2>LA VIÀ</h2>
 
                     <p className="ticket-couple">
-                        La Loggia (TO)
+                        Cavour (TO)
                     </p>
 
                     <p className="ticket-description">
-                        via Paperino 10
+                        via Rimembranza 9
                     </p>
 
                     <div className="ticket-divider">
@@ -26,9 +26,9 @@ function MovieTicket() {
                 </div>
 
                 <div className="ticket-stub">
-                    <span className="stub-label">il 24 Aprile 2026</span>
+                    <span className="stub-label">il 24 Aprile 2027</span>
 
-                    <span className="stub-bottom">Alle ore <br></br> 12:00</span>
+                    <span className="stub-bottom">Alle ore <br></br> 11:00</span>
 
                     <div className="ticket-icon">✦</div>
                 </div>
