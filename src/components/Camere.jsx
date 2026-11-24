@@ -81,7 +81,11 @@ function Camere() {
 
                         <img src="/video-player.png" alt="" />
 
-                        <h2>Compila il form se hai piacere di passare la notte in location</h2>
+                        <h2>Hai piacere di passare la notte in location?</h2>
+
+                        <div className="prezzi">
+                            <p>Ogni camera ha un prezzo di 65€ (colazione inclusa). <br></br>Ogni letto aggiuntivo ha un prezzo di 15€.</p>
+                        </div>
 
                         {/* Nome */}
                         <div className="form-group">

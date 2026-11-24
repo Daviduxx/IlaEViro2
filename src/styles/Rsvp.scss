@@ -12,6 +12,12 @@
         outline-offset: 5px;
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
 
+        p {
+            color: var(--color-midnight);
+            font-size: 0.8rem;
+            margin-bottom: var(--space-xs);
+        }
+
         h2 {
             font-family: var(--font-heading);
             font-size: clamp(2rem, 5vw, 2.8rem);

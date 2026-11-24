@@ -1,7 +1,7 @@
 import '../styles/LocationButton.scss';
 
 function LocationButton() {
-    const address = encodeURIComponent('Via Roma 10, Torino, Italia');
+    const address = encodeURIComponent('Via Rimembranza 9, Cavour, Italia');
 
     return (
         <a

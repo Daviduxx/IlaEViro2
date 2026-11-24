@@ -93,7 +93,7 @@ function Rsvp() {
                         <h2>Conferma la tua partecipazione</h2>
 
                         <p className="rsvp-intro">
-                            Il nostro giorno speciale non sarebbe lo stesso senza di voi.
+                            Il nostro giorno speciale non sarebbe lo stesso senza di voi.<br></br>
                             Fateci sapere se sarete dei nostri!
                         </p>
 

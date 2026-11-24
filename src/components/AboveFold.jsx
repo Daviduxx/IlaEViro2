@@ -10,7 +10,7 @@ function Abovefold() {
                 <Navbar></Navbar>
                 <h3>Il matrimonio di</h3>
                 <h1>Ilaria & Giulio</h1>
-                <h2>Una storia da vivere con voi</h2>
+                <h2>Una storia da vivere <br></br>con voi</h2>
                 <SectionDivider></SectionDivider>
                 <h4>Siamo lieti di invitarvi ufficialmente alla prima cinematografica più attessa dell'anno!</h4>
                 <Button onClick={() => {
@@ -25,11 +25,11 @@ function Abovefold() {
                         <div className="sposi">
                             <div>
                                 <h6>LO SPOSO</h6>
-                                <h5>Giulio Marchesan Benso</h5>
+                                <h5>Giulio <br></br>Marchesan Benso</h5>
                             </div>
                             <div>
                                 <h6>LA SPOSA</h6>
-                                <h5>Ilaria Aziomonti</h5>
+                                <h5>Ilaria <br></br>Aziomonti</h5>
                             </div>
                         </div>
                     </div>
