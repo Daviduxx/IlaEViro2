@@ -1,0 +1,170 @@
+.timeline-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: var(--color-midnight);
+    color: var(--color-champagne);
+}
+
+/* HEADER */
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.timeline-subtitle {
+    color: var(--color-gold);
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+}
+
+.timeline-header h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.timeline-header p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.timeline-divider {
+    width: 70px;
+    height: 1px;
+    background: var(--color-gold);
+    margin: 25px auto;
+}
+
+/* TIMELINE */
+
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* LINEA VERTICALE */
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    bottom: 15px;
+    width: 1px;
+    background: var(--color-gold);
+    opacity: 0.7;
+}
+
+/* SINGOLO EVENTO */
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* ICONA */
+
+.timeline-marker {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+
+    width: 51px;
+    height: 51px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-midnight);
+    border: 1px solid var(--color-gold);
+    border-radius: 50%;
+
+    font-size: 1.2rem;
+}
+
+/* CARD */
+
+.timeline-card {
+    flex: 1;
+    padding: 22px 25px;
+
+    background: var(--color-champagne);
+    color: var(--color-midnight);
+
+    border: 1px solid var(--color-gold);
+    position: relative;
+}
+
+.timeline-time {
+    display: inline-block;
+    color: #98763d;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.timeline-card h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.timeline-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.85;
+    margin: 0;
+}
+
+/* FOOTER */
+
+.timeline-footer {
+    text-align: center;
+    margin-top: 65px;
+    color: var(--color-gold);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .timeline-section {
+        padding: 60px 15px;
+    }
+
+    .timeline-item {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-marker {
+        width: 41px;
+        height: 41px;
+        font-size: 1rem;
+    }
+
+    .timeline-card {
+        padding: 17px;
+    }
+
+    .timeline-card h3 {
+        font-size: 1.1rem;
+    }
+
+}

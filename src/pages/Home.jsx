@@ -6,6 +6,7 @@ import PhotoCarousel from '../components/PhotoCarousel';
 import ThankYou from '../components/ThankYou';
 import Countdown from '../components/Countdown';
 import Footer from '../components/Footer';
+import Timeline from '../components/TimeLine';
 
 function Home() {
 
@@ -61,6 +62,7 @@ function Home() {
         <>
             <Abovefold></Abovefold>
             <MovieTicket></MovieTicket>
+            <Timeline></Timeline>
             <Rsvp></Rsvp>
             <Camere></Camere>
             <PhotoCarousel photos={weddingPhotos}></PhotoCarousel>
