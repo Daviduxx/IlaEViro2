@@ -12,9 +12,18 @@ function Navbar() {
                 <img src="/logo.png" alt="" className='logo' />
             </Link>
 
-            <div className="navbar-links">
-                <button onClick={logout} className={`${session ? '' : 'notVisible'}`}>Logout</button>
+            <div className='buttonContainer'>
+
+                <div className="navbar-links">
+                    <Link to="/admin" >
+                        <button className={`${session ? '' : 'notVisible'}`}>Admin</button>
+                    </Link>
+                </div>
+                <div className="navbar-links">
+                    <button onClick={logout} className={`${session ? '' : 'notVisible'}`}>Logout</button>
+                </div>
             </div>
+
 
         </nav>
     );

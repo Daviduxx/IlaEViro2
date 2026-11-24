@@ -14,6 +14,13 @@ img.logo {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     padding: var(--space-md);
     background-color: tr;
+
+    .buttonContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
 }
 
 .navbar-logo {
@@ -25,11 +32,11 @@ img.logo {
 
 .navbar-links {
     display: flex;
-    gap: 30px;
 
     button {
         width: 100%;
-        padding: 16px 30px;
+        padding: 10px 20px;
+        margin: 0 20px;
 
         background: var(--color-hollywood-red);
         color: var(--color-champagne);
