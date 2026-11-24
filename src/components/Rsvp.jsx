@@ -94,7 +94,7 @@ function Rsvp() {
 
                         <p className="rsvp-intro">
                             Il nostro giorno speciale non sarebbe lo stesso senza di voi.<br></br>
-                            Fateci sapere se sarete dei nostri!
+                            Ti preghiamo di farci sapere se sarai dei nostri entro il <br></br><b>15 gennaio 2027</b>
                         </p>
 
                         <div className="rsvp-divider">✦</div>
