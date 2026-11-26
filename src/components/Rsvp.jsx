@@ -26,7 +26,7 @@ function Rsvp() {
             case '22P02':
                 return 'Attenzione! Inserisci un numero valido!'
             case '23514':
-                return 'Attenzione! I campi "Nomi" non possono superare i 100 caratteri, mentre il messaggio e il campo per le intolleranze non possono superare i 500 caratteri. Il numero di partecipanti ed il numero bambini non può essere mionore di 0 o maggiore di 10.';
+                return 'Attenzione! I dati non sono inseriti correttamente';
             default:
                 return 'Attenzione! Si è verificato un problema. Verifica che i campi siano inseriti correttamente'
         }
@@ -135,9 +135,9 @@ function Rsvp() {
                                 name="nomi"
                                 value={formData.nomi}
                                 onChange={handleChange}
-                                placeholder="Inserisci i nomi dei partecipanti"
+                                placeholder="Es: Mario, Chiara"
                                 maxLength={100}
-
+                                required
                             />
                         </div>
 
