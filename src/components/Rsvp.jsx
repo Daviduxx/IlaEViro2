@@ -101,7 +101,7 @@ function Rsvp() {
 
                         {/* Partecipazione */}
                         <div className="form-group">
-                            <p className="form-label">Parteciperai?</p>
+                            <p className="form-label">Parteciperai?*</p>
                             <div className="attendance-options">
                                 <label>
                                     <input
@@ -128,7 +128,7 @@ function Rsvp() {
                         </div>
                         {/* Nomi */}
                         <div className="form-group">
-                            <label htmlFor="nome">Nomi</label>
+                            <label htmlFor="nome">Nomi*</label>
                             <input
                                 type="text"
                                 id="nomi"
@@ -144,7 +144,7 @@ function Rsvp() {
                         {/* Numero totale */}
                         <div className="form-group">
                             <label htmlFor="numeroTotale">
-                                Numero totale di partecipanti
+                                Numero totale di partecipanti*
                             </label>
                             <input
                                 type="number"
