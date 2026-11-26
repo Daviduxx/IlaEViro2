@@ -9,7 +9,9 @@ function Camere() {
         nome: '',
         numeroPersone: 0,
         lettiAggiuntivi: 0,
-        messaggio: ''
+        messaggio: '',
+        email: '',
+        telephone: ''
     })
 
     const [inviato, setInviato] = useState(false)
@@ -36,10 +38,11 @@ function Camere() {
 
         setFormData({
             ...formData,
-            [name]: name === 'camera' ? value === 'si' : value
+            [name]: value
         })
 
     }
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -89,7 +92,7 @@ function Camere() {
 
                         {/* Nome */}
                         <div className="form-group">
-                            <label htmlFor="nome">Nome per la prenotazione</label>
+                            <label htmlFor="nome">Nome per la prenotazione*</label>
                             <input
                                 type="text"
                                 id="nome"
@@ -105,7 +108,7 @@ function Camere() {
                         {/* Numero persone */}
                         <div className="form-group">
                             <label htmlFor="numeroPersone">
-                                In quante persone siete?
+                                In quante persone siete?*
                             </label>
                             <input
                                 type="number"
@@ -115,6 +118,37 @@ function Camere() {
                                 onChange={handleChange}
                                 min="0"
                                 max="10"
+                                required
+                            />
+                        </div>
+
+                        {/* Telefono */}
+                        <div className="form-group">
+                            <label htmlFor="telephone">Numero di telefono (useremo questo dato per la conferma della prenotazione)*</label>
+                            <input
+                                type="tel"
+                                id="telephone"
+                                name="telephone"
+                                value={formData.telephone}
+                                onChange={handleChange}
+                                placeholder="Es. +39 333 123 4567"
+                                required
+                                maxLength={20}
+                            />
+                        </div>
+
+                        {/* EMail */}
+                        <div className="form-group">
+                            <label htmlFor="email">
+                                Inserisci la tua e-mail (useremo questo dato per la conferma della prenotazione)*
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="mario.rossi@email.com"
                                 required
                             />
                         </div>
@@ -166,7 +200,7 @@ function Camere() {
                             La tua risposta è stata registrata
                             correttamente.
                         </p>
-                        <span>Non vediamo l'ora di festeggiare con te!</span>
+                        <span>Verrai contattato dalla nostra Wedding Planner per la conferma della prenotazione</span>
                     </div>
                 )
             }

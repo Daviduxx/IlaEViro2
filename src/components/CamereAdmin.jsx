@@ -155,7 +155,12 @@ function Camere() {
 
             <h2>Lista Camere prenotate</h2>
 
-            <p>Camere registratie {camere.length}</p>
+            <div className="count">
+
+                <p>Registrazioni totali: {camere.length}</p>
+                <p>Numero persone prenotate: {camere.reduce((s, o) => s + o.numeroPersone, 0)}</p>
+                <p>Letti aggiuntivi richiesti: {camere.reduce((s, o) => s + o.lettiAggiuntivi, 0)}</p>
+            </div>
 
             {errorMessage && (
                 <p className="error-message">

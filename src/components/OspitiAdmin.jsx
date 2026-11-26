@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { supabase } from "../utils/supabase";
 import '../styles/OspitiAdmin.scss'
@@ -28,7 +27,7 @@ function Ospiti() {
                 .order("created_at", { ascending: true });
 
             if (error) throw error;
-
+            console.log(data)
             setOspiti(data);
 
         } catch (error) {
@@ -155,8 +154,22 @@ function Ospiti() {
         <section className="dashboard-ospiti">
 
             <h2>Lista Partecipanti</h2>
+            <div className="count">
 
-            <p>Ospiti registrati: {ospiti.length}</p>
+                <p>Registrazioni totali: {ospiti.length}</p>
+                <p>Numero partecipanti: {ospiti
+                    .filter((o) => o.partecipa === true)
+                    .reduce((s, o) => s + o.numeroTotale, 0)}</p>
+
+                <p>Numero bambini: {ospiti
+                    .filter((o) => o.partecipa === true)
+                    .reduce((s, o) => s + o.numeroBambini, 0)}</p>
+                <p>Sono state segnalate {ospiti
+                    .filter((o) => o.intolleranze != '')
+                    .length
+                } intolleranze o allergie</p>
+
+            </div>
 
             {errorMessage && (
                 <p className="error-message">
