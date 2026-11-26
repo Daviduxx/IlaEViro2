@@ -11,7 +11,7 @@ function Camere() {
         lettiAggiuntivi: 0,
         messaggio: '',
         email: '',
-        telephone: ''
+        numero_telefono: ''
     })
 
     const [inviato, setInviato] = useState(false)
@@ -26,7 +26,7 @@ function Camere() {
             case '22P02':
                 return 'Attenzione! Inserisci un numero valido!'
             case '23514':
-                return 'Attenzione! I campi "Nomi" non possono superare i 100 caratteri, mentre il messaggio non può superare i 500 caratteri. Il numero di persone ed il numero di letti aggiuntivi non può essere mionore di 0 o maggiore di 10.';
+                return 'Attenzione! Attenzione! I dati non sono inseriti correttamente';
             default:
                 return 'Attenzione! Si è verificato un problema. Verifica che i campi siano inseriti correttamente'
         }
@@ -35,12 +35,10 @@ function Camere() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-
         setFormData({
             ...formData,
             [name]: value
         })
-
     }
 
     const handleSubmit = async (e) => {
@@ -52,7 +50,9 @@ function Camere() {
                 nome: formData.nome,
                 numero_persone: formData.numeroPersone,
                 letti_aggiuntivi: formData.lettiAggiuntivi,
-                messaggio: formData.messaggio
+                messaggio: formData.messaggio,
+                numero_telefono: formData.numero_telefono,
+                email: formData.email
             })
 
         if (error) {
@@ -102,6 +102,7 @@ function Camere() {
                                 placeholder="Es. Mario Rossi"
                                 required
                                 maxLength={100}
+                                minLength={2}
                             />
                         </div>
 
@@ -116,7 +117,7 @@ function Camere() {
                                 name="numeroPersone"
                                 value={formData.numeroPersone}
                                 onChange={handleChange}
-                                min="0"
+                                min="1"
                                 max="10"
                                 required
                             />
@@ -124,12 +125,12 @@ function Camere() {
 
                         {/* Telefono */}
                         <div className="form-group">
-                            <label htmlFor="telephone">Numero di telefono (useremo questo dato per la conferma della prenotazione)*</label>
+                            <label htmlFor="numero_telefono">Numero di telefono (useremo questo dato per la conferma della prenotazione)*</label>
                             <input
                                 type="tel"
-                                id="telephone"
-                                name="telephone"
-                                value={formData.telephone}
+                                id="numero_telefono"
+                                name="numero_telefono"
+                                value={formData.numero_telefono}
                                 onChange={handleChange}
                                 placeholder="Es. +39 333 123 4567"
                                 required

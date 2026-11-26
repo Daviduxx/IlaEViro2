@@ -181,10 +181,12 @@ function Camere() {
                         <thead>
                             <tr>
                                 <th>Apri</th>
-                                <th>Nome prenotazione</th>
+                                <th>Nome</th>
                                 <th>Messaggio</th>
-                                <th>Numero totale</th>
-                                <th>Numero Letti Aggiuntivi</th>
+                                <th>PAX</th>
+                                <th>Letti Aggiuntivi</th>
+                                <th>Telefono</th>
+                                <th>E-Mail</th>
                                 <th>Azioni</th>
                             </tr>
                         </thead>
